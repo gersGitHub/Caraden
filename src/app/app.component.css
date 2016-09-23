@@ -1,0 +1,28 @@
+.headshot {
+  max-width: 50px;
+  border: 1px solid #222;
+  padding: 3px;
+}
+
+.nav {
+  font-size: 16px;
+}
+
+    .menu li.active {
+      font-weight: bold;
+    }
+
+    .menu li a {
+      color: #eee;
+    }
+
+#sidebar {
+  background: #2a2c36;
+  color: #eee;
+  position: fixed;
+  height: 100%;
+  width: 200px;
+  overflow: hidden;
+  margin: 0;
+}
+

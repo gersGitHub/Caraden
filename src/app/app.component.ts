@@ -3,31 +3,7 @@ import { Component, trigger, state, style, transition, animate} from '@angular/c
 @Component({
   selector: 'app-root',
   templateUrl:'./app.component.html',
-  styleUrls: ['./app.component.css'],
-  animations: 
-  [
-    trigger('changeSidebarLeftValue', 
-    [
-      state('showSidebar', style({left:'0'})),
-      state('hideSidebar', style({left:'-200px'})),
-      transition('showSidebar => hideSidebar', animate("250ms ease")),
-      transition('hideSidebar => showSidebar', animate("250ms ease"))
-    ]),
-    trigger('changeWrapperLeftMargin', 
-    [
-      state('showWrapper', style({margin:'0'})),
-      state('hideWrapper', style({margin:'0 0 0 200px'})),
-      transition('showWrapper => hideWrapper', animate("250ms ease")),
-      transition('hideWrapper => showWrapper', animate("250ms ease"))
-    ]),
-    trigger('changeFooterLeftMargin', 
-    [
-      state('showFooter', style({margin:'0'})),
-      state('hideFooter', style({margin:'0 0 0 200px'})),
-      transition('showFooter => hideFooter', animate("250ms ease")),
-      transition('hideFooter => showFooter', animate("250ms ease"))
-    ])
-  ]
+  styleUrls: ['./app.component.css']
 })
 
 export class AppComponent{

@@ -1,61 +1,26 @@
-<head>
-  <style type="text/css" media="print">
-  .dontprint
-  { display: none; }
-  </style>
-</head>
 
 <body>
 
-    <div id="sidebar" [@changeSidebarLeftValue]="state1">
-      <ul class="nav">
-        <li class="active"><a  [routerLink]=" ['./home'] ">Home</a></li>
-        <li class="active"><a  [routerLink]=" ['./invoice'] ">Invoice</a></li>
-        <li class="active"><a  [routerLink]=" ['./about'] ">About</a></li>
-        <li class="active"><a  [routerLink]=" ['./contact'] ">Contact</a></li>
-      </ul>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-left">
+
+        </ul>
+        
+        <a class="navbar-brand" style="padding-left:38px"><b>Caraden Construction Ltd.</b></a>
+        </div>
+
+    </nav>
+    
+    <div id="main" class="container-fluid">
+      <div>
+        <router-outlet></router-outlet>
+      </div>
     </div>
 
-    <div id="wrapper" [@changeWrapperLeftMargin]="state2">
-
-      <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-          <ul class="nav navbar-nav navbar-left">
-            <li>
-              <button id="toggleSidebar" class="btn btn-sm btn-info" style="padding-top:10px; padding-bottom:12px; padding-left:18px; padding-right:20px"
-                                                                                       (click)="toggleSidebarMethod()">
-                <i class={{toggleSidebarButtonArrow}} style="font-size:large"></i>
-              </button>
-            </li>
-          </ul>
-          
-          <a class="navbar-brand" style="padding-left:38px"><b>Caraden Construction Ltd.</b></a>
-          
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a href="#/contact" class="btn btn-sm btn-info" style="padding-top:9px; padding-bottom:12px">
-                <i class="fa fa-save"></i> Save
-              </a>
-            </li>
-            <li>
-              <a href="#" class="btn btn-sm btn-info" style="padding-top:9px; padding-bottom:12px">
-                <i class="fa fa-print"></i> Print
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      
-      <div id="main" class="container-fluid">
-        <div>
-          <router-outlet></router-outlet>
-        </div>
-      </div>
-
-      <div id="footer" class="container-fluid">
-        <div class="navbar navbar-inverse navbar-fixed-bottom" [@changeFooterLeftMargin]="state3">
-          <h4 class="text-center text-info">&copy; 2016 Caraden Construction Ltd.</h4>
-        </div>
+    <div id="footer" class="container-fluid">
+      <div class="navbar navbar-inverse navbar-fixed-bottom">
+        <h4 class="text-center text-info">&copy; 2016 Caraden Construction Ltd.</h4>
       </div>
     </div>
 
